@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-font);
+  outline: none;
+}
+
+/* VARIÁVEIS */
+:root {
+  --background: #4b5563;
+  --bg-form: #111826;
+  --bg-button: #1e293b;
+  --color-font: #9ca3a7;
+  --bg-input: #334155;
+  --bg-button-add-hover: #1ac453;
+  --bg-button-editar-hover: #1a59c4;
+  --bg-button-remover-hover: #c41a1a;
+  --bg-compras-check: #1ac4537d;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  background-color: var(--background);
+  overflow-x: hidden;
+}
+
+.titulo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.formulario {
+  background-color: var(--bg-form);
+  border: 1px solid var(--bg-form);
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--bg-form);
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+input {
+  margin: 0 10px;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 1rem;
+  background-color: var(--bg-input);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px var(--bg-input) inset;
+  box-shadow: 0 0 0px 1000px var(--bg-input) inset;
+  -webkit-text-fill-color: var(--color-font);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.botao {
+  margin: 0 auto;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--bg-button);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.botao:active {
+  transform: scale(0.9);
+}
+
+.botao_add {
+  width: 200px;
+}
+
+.botao_add:hover {
+  background-color: var(--bg-button-add-hover);
+  color: #fff;
+}
+
+.botao_editar {
+  width: 100px;
+  margin: 0 10px;
+}
+
+.botao_editar:hover {
+  background-color: var(--bg-button-editar-hover);
+  color: #fff;
+}
+
+.botao_remover {
+  width: 100px;
+}
+
+.botao_remover:hover {
+  background-color: var(--bg-button-remover-hover);
+  color: #fff;
+}
+
+.lista_compras {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  background-color: var(--bg-form);
+  border: 1px solid var(--bg-form);
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--bg-form);
+  margin: 0 0 15px 0;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 650px;
+  max-width: 650px;
+}
+
+.total {
+  text-align: center;
+}
+
+.concluido {
+  background-color: var(--bg-compras-check);
+  opacity: 0.7s;
+  transition: 0.2s linear;
+}
